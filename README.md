@@ -59,6 +59,8 @@ npm start
 
 ## Share results
 
-A zip archive of the project with accomplished exercise can be sent via email to ivan@workgenius.com
+A github link (ex: you can fork current repo) expected to be sent via email to ivan@workgenius.com
+
+> if github link is not an option for you, a zip archive of the project with accomplished exercise is fine as well
 
 Good luck ;) 
