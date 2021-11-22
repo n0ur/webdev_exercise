@@ -28,6 +28,8 @@ Our customer-success department is missing functionality to group users based on
 ### Backend
 
 > _Assumption is that you working under ubuntu and have set up python3.8_
+> 
+> If you have difficulties to write backend in python, no problem, you can as well use any nodejs backend framework for that. Important part here is to complete the challenge ;)
 
 ```shell
 cd backend
