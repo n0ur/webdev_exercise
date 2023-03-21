@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 
 const addUsersBulk = async () => {
-  await fetch("http://127.0.0.1:5000/users", {
+  await fetch(`${process.env.REACT_APP_BASE_URL}/users`, {
     method: "POST",
   });
 };
