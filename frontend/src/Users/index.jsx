@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import AddUsers from "./AddUsers";
 import RemoveUsers from "./RemoveUsers";
+import Skills from "../Skills";
 import "./Users.css";
 
 const UsersTable = ({ children }) => (
@@ -22,7 +23,7 @@ const UserRow = ({ id, name }) => (
 );
 
 const fetchUsers = async () => {
-  const response = await fetch("http://127.0.0.1:5000/users");
+  const response = await fetch(`${process.env.REACT_APP_BASE_URL}/users`);
   const { items } = await response.json();
   return items;
 };
@@ -33,12 +34,18 @@ const UsersActions = ({ children }) => (
 
 export default function Users() {
   const [users, setUsers] = useState([]);
+  // for the users in the select box
+  const [userList, setUserList] = useState([]);
   const loadUsers = useCallback(() => {
-    fetchUsers().then(setUsers);
+    fetchUsers().then((users) => {
+      setUsers(users);
+      setUserList(users);
+    })
   }, []);
   useEffect(loadUsers, [loadUsers]);
   return (
     <div>
+      <Skills userList={userList} onFilter={setUsers} />
       <UsersTable>
         <UsersTableHeader />
         {users.map((user) => (

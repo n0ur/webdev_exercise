@@ -1,0 +1,26 @@
+.skills-list {
+  display: flex;
+  align-items: center;
+}
+.skills-list__item {
+  padding: 0.5rem;
+  background: #ddd;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.skills-list__item.selected {
+  background: #054273;
+  color: #fff;
+}
+.skills-actions > div {
+  padding: 1rem 0;
+}
+.skills-actions input,
+.skills-actions select {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+.skills-actions input {
+  margin-left: 0.5rem;
+}
